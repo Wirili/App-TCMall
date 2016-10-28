@@ -170,6 +170,7 @@
         android:layout_marginTop="6dp"
         android:layout_below="@id/myOrder">
         <LinearLayout
+            android:id="@+id/my_bUpgrade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -198,6 +199,7 @@
                 android:src="@mipmap/rt"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/my_bUserInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -226,6 +228,7 @@
                 android:src="@mipmap/rt"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/my_bSetting"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -254,6 +257,7 @@
                 android:src="@mipmap/rt"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/my_bPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -282,6 +286,7 @@
                 android:src="@mipmap/rt"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/my_bAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -310,6 +315,7 @@
                 android:src="@mipmap/rt"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/my_bFeed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -338,6 +344,7 @@
                 android:src="@mipmap/rt"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/my_bTel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
