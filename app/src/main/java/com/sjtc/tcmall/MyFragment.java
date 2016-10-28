@@ -2,6 +2,7 @@ package com.sjtc.tcmall;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+
+import com.sjtc.tcmall.my.AddressListActivity;
 
 
 /**
@@ -40,6 +43,18 @@ public class MyFragment extends Fragment implements View.OnClickListener{
     }
 
     private void initView(){
+
+        View bFav = mView.findViewById(R.id.my_bFav);
+        View bHistory = mView.findViewById(R.id.my_bHistory);
+
+        //订单列表
+        View bOrder = mView.findViewById(R.id.my_bOrder);
+        View bUnpay = mView.findViewById(R.id.my_bUnpay);
+        View bUnshop = mView.findViewById(R.id.my_bUnshop);
+        View bReceiving = mView.findViewById(R.id.my_bReceiving);
+        View bOrderBack = mView.findViewById(R.id.my_bOrderBack);
+
+        //功能列表
         View bUpgrade = mView.findViewById(R.id.my_bUpgrade);
         View bUserInfo = mView.findViewById(R.id.my_bUserInfo);
         View bSetting = mView.findViewById(R.id.my_bSetting);
@@ -47,6 +62,17 @@ public class MyFragment extends Fragment implements View.OnClickListener{
         View bAddress = mView.findViewById(R.id.my_bAddress);
         View bFeed = mView.findViewById(R.id.my_bFeed);
         View bTel = mView.findViewById(R.id.my_bTel);
+
+        //点击绑定
+        bFav.setOnClickListener(this);
+        bHistory.setOnClickListener(this);
+
+        bOrder.setOnClickListener(this);
+        bUnpay.setOnClickListener(this);
+        bUnshop.setOnClickListener(this);
+        bReceiving.setOnClickListener(this);
+        bOrderBack.setOnClickListener(this);
+
         bUpgrade.setOnClickListener(this);
         bUserInfo.setOnClickListener(this);
         bSetting.setOnClickListener(this);
@@ -59,6 +85,27 @@ public class MyFragment extends Fragment implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+            case R.id.my_bFav:
+                Toast.makeText(context,"我的收藏被点击",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.my_bHistory:
+                Toast.makeText(context,"浏览记录被点击",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.my_bOrder:
+                Toast.makeText(context,"查看全部订单被点击",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.my_bUnpay:
+                Toast.makeText(context,"待付款被点击",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.my_bUnshop:
+                Toast.makeText(context,"待发货被点击",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.my_bReceiving:
+                Toast.makeText(context,"待收货被点击",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.my_bOrderBack:
+                Toast.makeText(context,"退换货/款被点击",Toast.LENGTH_SHORT).show();
+                break;
             case R.id.my_bUpgrade:
                 Toast.makeText(context,"职业晋级赛被点击",Toast.LENGTH_SHORT).show();
                 break;
@@ -72,6 +119,7 @@ public class MyFragment extends Fragment implements View.OnClickListener{
                 Toast.makeText(context,"修改密码被点击",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.my_bAddress:
+                startActivity(new Intent(context, AddressListActivity.class));
                 Toast.makeText(context,"收货地址被点击",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.my_bFeed:
