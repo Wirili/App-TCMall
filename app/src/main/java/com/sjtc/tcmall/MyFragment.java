@@ -120,7 +120,6 @@ public class MyFragment extends Fragment implements View.OnClickListener{
                 break;
             case R.id.my_bAddress:
                 startActivity(new Intent(context, AddressListActivity.class));
-                Toast.makeText(context,"收货地址被点击",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.my_bFeed:
                 Toast.makeText(context,"意见反馈被点击",Toast.LENGTH_SHORT).show();

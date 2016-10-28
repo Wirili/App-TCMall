@@ -8,10 +8,18 @@
     tools:context="com.sjtc.tcmall.my.AddressListActivity">
 <include layout="@layout/title_bar" />
     <ListView
+        android:id="@+id/lv_AddressList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
-    </ListView>
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/t_lvAddressListEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:text="暂无数据"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
