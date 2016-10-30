@@ -12,14 +12,16 @@
             android:id="@+id/im_addressList_r"
             android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:src="@mipmap/rt"
+            android:layout_centerVertical="true"
             />
         <TextView
             android:id="@+id/t_addressList_tel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toLeftOf="@id/im_addressList_r"
+            android:textSize="16sp"
             android:text="15815176115"/>
         <TextView
             android:id="@+id/t_addressList_truename"
@@ -27,6 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_toLeftOf="@id/t_addressList_tel"
             android:layout_alignParentLeft="true"
+            android:textSize="16sp"
             android:text="收货人："/>
         <TextView
             android:id="@+id/t_addressList_address"
@@ -35,6 +38,7 @@
             android:layout_alignLeft="@id/t_addressList_truename"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
             android:text="收货地址："/>
     </RelativeLayout>
     <View
@@ -44,6 +48,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
+        <CheckBox
+            android:id="@+id/cb_addressList_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置默认地址"/>
     </RelativeLayout>
 </LinearLayout>
